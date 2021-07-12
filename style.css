@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding: 1em 0.4em;
+    background-color: rgb(0, 89, 255);
+    color: white;
+}
+
+.conainer{
+    padding: 0em 4em;
+}
