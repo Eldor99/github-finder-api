@@ -1,22 +1,19 @@
 const github = new Github;
+const ui = new UI;
 
 // Search input
 const searchUser = document.querySelector('.form-control');
 
 // Search input event listener
 searchUser.addEventListener('keyup', (e) => {
-    // Get input text
+    // Get input
     const userText = e.target.value;
 
     if(userText !== ''){
-        // make http call
+        // Make http call
         github.getUser(userText)
-        .then(data => console.log(data))
-        if(data.profile.message === 'Not Found'){
-            // Show alert
-            alert('Users not found');
-        }else{
-
-        }
+        .then(data => {
+            ui.showProfile(data)
+        })
     }
 });
